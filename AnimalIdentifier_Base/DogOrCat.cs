@@ -8,8 +8,8 @@ namespace AnimalIdentifier_Base
 {
     class DogOrCat
     {
-        private bool isDog;
-        private bool isCat;
+        protected bool isDog;
+        protected bool isCat;
 
         public DogOrCat() { }
 
