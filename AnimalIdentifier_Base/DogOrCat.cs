@@ -8,26 +8,26 @@ namespace AnimalIdentifier_Base
 {
     class DogOrCat
     {
-        protected bool isDog;
-        protected bool isCat;
+        //protected bool isDog;
+        //protected bool isCat;
 
         public DogOrCat() { }
 
-        protected void dogTest(string word)
+        /*protected void dogTest(string word)
         {
             if (word == "dog" || word == "dogs")
             {
                 isDog = true;
             }
-        }
+        }*/
 
-        protected void catTest(string word)
+        /*protected void catTest(string word)
         {
             if (word == "cat" || word == "cats")
             {
                 isCat = true;
             }
-        }
+        }*/
 
         public void sentenceTest(string word)
         {

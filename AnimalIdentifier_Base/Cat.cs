@@ -8,5 +8,16 @@ namespace AnimalIdentifier_Base
 {
     class Cat : DogOrCat
     {
+        private bool isCat;
+
+        protected bool returnIsCat()
+        {
+            return isCat;
+        }
+
+        protected void catTest(string name)
+        {
+            isCat = (name == "cat") ? true : false;
+        }
     }
 }
