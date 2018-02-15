@@ -6,18 +6,19 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class Dog : DogOrCat
+    class Dog
     {
         private bool isDog;
 
-        protected bool returnIsDog()
+        public bool returnIsDog()
         {
             return isDog;
         }
 
-        protected void dogTest(string name)
+        public void dogTest(string name)
         {
             isDog = (name == "dog") ? true : false;
+            //Console.WriteLine(isDog);
         }
     }
 }

@@ -8,74 +8,38 @@ namespace AnimalIdentifier_Base
 {
     class DogOrCat
     {
-        //protected bool isDog;
-        //protected bool isCat;
 
-        public DogOrCat() { }
+        private static Dog dog = new Dog();
+        private static Cat cat = new Cat();
 
-        /*protected void dogTest(string word)
+        public DogOrCat() {}
+
+        public void imageTest(string name)
         {
-            if (word == "dog" || word == "dogs")
-            {
-                isDog = true;
-            }
-        }*/
-
-        /*protected void catTest(string word)
-        {
-            if (word == "cat" || word == "cats")
-            {
-                isCat = true;
-            }
-        }*/
-
-        public void sentenceTest(string word)
-        {
-            dogTest(word);
-            catTest(word);
-        }
-
-        protected bool isDogTrue()
-        {
-            if (isDog == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
-        protected bool isCatTrue()
-        {
-            if (isCat == true)
-            {
-                return true;
-            }
-            else
-            {
-                return false;
-            }
+            
+            dog.dogTest(name);
+            cat.catTest(name);
         }
 
         public void output()
         {
-            if ((isDogTrue() == true) && (isCatTrue() == true))
+            Console.WriteLine(dog.returnIsDog());
+            Console.WriteLine(cat.returnIsCat());
+            if ((dog.returnIsDog() == true) && (cat.returnIsCat() == true))
             {
-                Console.WriteLine("The sentence is talking about dogs and cats.");
+                Console.WriteLine("This image comtains a dog and a cat.");
             }
-            else if ((isDogTrue() == true) && (isCatTrue() == false))
+            else if ((dog.returnIsDog() == true) && (cat.returnIsCat() == false))
             {
-                Console.WriteLine("The sentence is talking about dogs.");
+                Console.WriteLine("This image has a dog.");
             }
-            else if ((isDogTrue() == false) && (isCatTrue() == true))
+            else if ((dog.returnIsDog() == false) && (cat.returnIsCat() == true))
             {
-                Console.WriteLine("The sentence is talking about cats.");
+                Console.WriteLine("This image has a cat.");
             }
             else
             {
-                Console.WriteLine("The sentence is not talking about dogs or cats.");
+                Console.WriteLine("This image has neither a dog nor a cat.");
             }
         }
     }

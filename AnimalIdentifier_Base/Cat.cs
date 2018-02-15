@@ -10,14 +10,15 @@ namespace AnimalIdentifier_Base
     {
         private bool isCat;
 
-        protected bool returnIsCat()
+        public bool returnIsCat()
         {
             return isCat;
         }
 
-        protected void catTest(string name)
+        public void catTest(string name)
         {
             isCat = (name == "cat") ? true : false;
+            //Console.WriteLine(isCat);
         }
     }
 }

@@ -19,10 +19,15 @@ namespace AnimalIdentifier_Base
             ImageTagger animalImageTagger = new ImageTagger();
             List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
 
+            DogOrCat a = new DogOrCat();
+            
             foreach (Tag tag in tags)
             {
                 Console.WriteLine(tag.name);
+                a.imageTest(tag.name);
             }
+
+            a.output();
 
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();
