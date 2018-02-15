@@ -39,10 +39,9 @@ namespace AnimalIdentifier_Base
 
         public void output()
         {
-            Console.WriteLine(this.isDog);
             if ((this.isDog == true) && (this.isCat == true))
             {
-                Console.WriteLine("This image comtains a dog and a cat.");
+                Console.WriteLine("This image has a dog and a cat.");
             }
             else if ((this.isDog == true) && (this.isCat == false))
             {
