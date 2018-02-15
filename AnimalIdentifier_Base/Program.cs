@@ -26,7 +26,6 @@ namespace AnimalIdentifier_Base
                 Console.WriteLine(tag.name);
                 a.imageTest(tag.name);
             }
-
             a.output();
 
             Console.WriteLine("Press Any Key to Continue.");

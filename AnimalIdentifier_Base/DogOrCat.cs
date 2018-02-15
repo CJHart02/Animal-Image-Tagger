@@ -14,26 +14,41 @@ namespace AnimalIdentifier_Base
 
         public DogOrCat() {}
 
+
+        private bool isDog;
+        private bool isCat;
+
         public void imageTest(string name)
         {
             
             dog.dogTest(name);
             cat.catTest(name);
+            getIsCat();
+            getIsDog();
+        }
+
+        public void getIsDog()
+        {
+            isDog = dog.returnIsDog();
+        }
+
+        public void getIsCat()
+        {
+            isCat = cat.returnIsCat();
         }
 
         public void output()
         {
-            Console.WriteLine(dog.returnIsDog());
-            Console.WriteLine(cat.returnIsCat());
-            if ((dog.returnIsDog() == true) && (cat.returnIsCat() == true))
+            Console.WriteLine(this.isDog);
+            if ((this.isDog == true) && (this.isCat == true))
             {
                 Console.WriteLine("This image comtains a dog and a cat.");
             }
-            else if ((dog.returnIsDog() == true) && (cat.returnIsCat() == false))
+            else if ((this.isDog == true) && (this.isCat == false))
             {
                 Console.WriteLine("This image has a dog.");
             }
-            else if ((dog.returnIsDog() == false) && (cat.returnIsCat() == true))
+            else if ((this.isDog == false) && (this.isCat == true))
             {
                 Console.WriteLine("This image has a cat.");
             }

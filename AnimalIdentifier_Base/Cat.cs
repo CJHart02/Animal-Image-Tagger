@@ -8,7 +8,7 @@ namespace AnimalIdentifier_Base
 {
     class Cat : DogOrCat
     {
-        private bool isCat;
+        private static bool isCat;
 
         public bool returnIsCat()
         {
@@ -17,8 +17,8 @@ namespace AnimalIdentifier_Base
 
         public void catTest(string name)
         {
-            isCat = (name == "cat") ? true : false;
-            //Console.WriteLine(isCat);
+            isCat = (name == "cat") ? true : isCat;
+
         }
     }
 }

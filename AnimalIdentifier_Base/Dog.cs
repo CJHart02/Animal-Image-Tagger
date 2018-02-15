@@ -17,8 +17,7 @@ namespace AnimalIdentifier_Base
 
         public void dogTest(string name)
         {
-            isDog = (name == "dog") ? true : false;
-            //Console.WriteLine(isDog);
+            isDog = (name == "dog") ? true : isDog;
         }
     }
 }
