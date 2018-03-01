@@ -6,18 +6,22 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class Dog
+    class Dog : Animal
     {
-        private bool isDog;
-
-        public bool returnIsDog()
+        public override void imageTest(string name)
         {
-            return isDog;
+            isAnimal = (name == "dog") ? true : false;
+
+            output();
         }
 
-        public void dogTest(string name)
+        protected override void output()
         {
-            isDog = (name == "dog") ? true : isDog;
+            if (isAnimal == true)
+            {
+                Console.WriteLine("This image contains a dog.");
+            }
         }
+
     }
 }

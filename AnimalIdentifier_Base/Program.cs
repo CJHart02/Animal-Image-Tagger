@@ -19,14 +19,18 @@ namespace AnimalIdentifier_Base
             ImageTagger animalImageTagger = new ImageTagger();
             List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
 
-            DogOrCat a = new DogOrCat();
-            
+            CallAnimal a = new CallAnimal();
+            Cat cat = new Cat();
+            Bird bird = new Bird();
+            Dog dog = new Dog();
+
             foreach (Tag tag in tags)
             {
-                Console.WriteLine(tag.name);
-                a.imageTest(tag.name);
+                //Console.WriteLine(tag.name);
+                a.callTest(cat, tag.name);
+                a.callTest(dog, tag.name);
+                a.callTest(bird, tag.name);
             }
-            a.output();
 
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();

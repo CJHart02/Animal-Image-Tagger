@@ -6,11 +6,11 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class Cat : Animal
+    class Bird : Animal
     {
         public override void imageTest(string name)
         {
-            isAnimal = (name == "cat") ? true : false;
+            isAnimal = (name == "bird") ? true : false;
 
             output();
         }
@@ -19,8 +19,9 @@ namespace AnimalIdentifier_Base
         {
             if (isAnimal == true)
             {
-                Console.WriteLine("This image contains a cat.");
+                Console.WriteLine("This image contains a bird.");
             }
         }
     }
+
 }
