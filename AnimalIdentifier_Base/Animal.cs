@@ -10,7 +10,7 @@ namespace AnimalIdentifier_Base
     {
         protected bool isAnimal;
 
-        public virtual void imageTest(string name)
+        public virtual void imageTest(string name, double conf)
         {
 
         }

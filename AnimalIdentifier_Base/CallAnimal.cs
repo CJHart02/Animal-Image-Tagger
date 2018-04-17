@@ -8,9 +8,9 @@ namespace AnimalIdentifier_Base
 {
     class CallAnimal
     {
-        public void callTest(Animal anm, string name)
+        public void callTest(Animal anm, string name, double conf)
         {
-            anm.imageTest(name);
+            anm.imageTest(name, conf);
         }
     }
 }

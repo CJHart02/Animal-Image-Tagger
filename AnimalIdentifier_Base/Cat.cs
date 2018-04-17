@@ -8,11 +8,14 @@ namespace AnimalIdentifier_Base
 {
     class Cat : Animal
     {
-        public override void imageTest(string name)
+        public override void imageTest(string name, double conf)
         {
-            isAnimal = (name == "cat") ? true : false;
+            if (confidenceCheck.confCheck(conf) == true)
+            {
+                isAnimal = (name == "cat") ? true : false;
 
-            output();
+                output();
+            }
         }
 
         protected override void output()

@@ -26,10 +26,10 @@ namespace AnimalIdentifier_Base
 
             foreach (Tag tag in tags)
             {
-                //Console.WriteLine(tag.name);
-                a.callTest(cat, tag.name);
-                a.callTest(dog, tag.name);
-                a.callTest(bird, tag.name);
+                //Console.WriteLine(tag.confidence);
+                a.callTest(cat, tag.name, tag.confidence);
+                a.callTest(dog, tag.name, tag.confidence);
+                a.callTest(bird, tag.name, tag.confidence);
             }
 
             Console.WriteLine("Press Any Key to Continue.");
