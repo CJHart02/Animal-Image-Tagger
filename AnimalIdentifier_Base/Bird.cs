@@ -22,7 +22,7 @@ namespace AnimalIdentifier_Base
         {
             if (isAnimal == true)
             {
-                Console.WriteLine("This image contains a bird.");
+                Console.WriteLine("This image contains a bird. ");
             }
         }
     }
