@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.filePath = new System.Windows.Forms.TextBox();
             this.dogButton = new System.Windows.Forms.CheckBox();
             this.catButton = new System.Windows.Forms.CheckBox();
             this.birbButton = new System.Windows.Forms.CheckBox();
@@ -38,28 +37,23 @@
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.textBox4 = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
             // 
-            // filePath
-            // 
-            this.filePath.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.filePath.ForeColor = System.Drawing.SystemColors.ActiveBorder;
-            this.filePath.Location = new System.Drawing.Point(21, 31);
-            this.filePath.Name = "filePath";
-            this.filePath.Size = new System.Drawing.Size(370, 26);
-            this.filePath.TabIndex = 0;
-            this.filePath.Text = "Please type or browse to file path";
-            this.filePath.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
             // dogButton
             // 
             this.dogButton.AutoSize = true;
             this.dogButton.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dogButton.Location = new System.Drawing.Point(12, 139);
+            this.dogButton.Location = new System.Drawing.Point(18, 200);
             this.dogButton.Name = "dogButton";
             this.dogButton.Size = new System.Drawing.Size(82, 28);
             this.dogButton.TabIndex = 1;
@@ -71,7 +65,7 @@
             // 
             this.catButton.AutoSize = true;
             this.catButton.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.catButton.Location = new System.Drawing.Point(12, 285);
+            this.catButton.Location = new System.Drawing.Point(18, 346);
             this.catButton.Name = "catButton";
             this.catButton.Size = new System.Drawing.Size(81, 28);
             this.catButton.TabIndex = 2;
@@ -83,7 +77,7 @@
             // 
             this.birbButton.AutoSize = true;
             this.birbButton.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.birbButton.Location = new System.Drawing.Point(12, 432);
+            this.birbButton.Location = new System.Drawing.Point(18, 493);
             this.birbButton.Name = "birbButton";
             this.birbButton.Size = new System.Drawing.Size(65, 28);
             this.birbButton.TabIndex = 3;
@@ -94,7 +88,7 @@
             // Browse
             // 
             this.Browse.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Browse.Location = new System.Drawing.Point(397, 16);
+            this.Browse.Location = new System.Drawing.Point(397, 33);
             this.Browse.Name = "Browse";
             this.Browse.Size = new System.Drawing.Size(75, 23);
             this.Browse.TabIndex = 4;
@@ -105,7 +99,7 @@
             // Search
             // 
             this.Search.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Search.Location = new System.Drawing.Point(397, 45);
+            this.Search.Location = new System.Drawing.Point(478, 34);
             this.Search.Name = "Search";
             this.Search.Size = new System.Drawing.Size(75, 23);
             this.Search.TabIndex = 5;
@@ -116,7 +110,7 @@
             // pictureBox1
             // 
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(148, 85);
+            this.pictureBox1.Location = new System.Drawing.Point(154, 146);
             this.pictureBox1.Name = "pictureBox1";
             this.pictureBox1.Size = new System.Drawing.Size(129, 129);
             this.pictureBox1.TabIndex = 6;
@@ -125,7 +119,7 @@
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(148, 231);
+            this.pictureBox2.Location = new System.Drawing.Point(154, 292);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(129, 129);
             this.pictureBox2.TabIndex = 7;
@@ -134,21 +128,81 @@
             // pictureBox3
             // 
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(148, 382);
+            this.pictureBox3.Location = new System.Drawing.Point(154, 443);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(129, 129);
             this.pictureBox3.TabIndex = 8;
             this.pictureBox3.TabStop = false;
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Comic Sans MS", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(17, 103);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(324, 20);
+            this.label1.TabIndex = 9;
+            this.label1.Text = "Please select the animal you are searching for";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
+            // 
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
+            this.openFileDialog1.FileOk += new System.ComponentModel.CancelEventHandler(this.openFileDialog1_FileOk);
+            // 
+            // textBox1
+            // 
+            this.textBox1.ForeColor = System.Drawing.Color.Black;
+            this.textBox1.Location = new System.Drawing.Point(21, 34);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(370, 22);
+            this.textBox1.TabIndex = 10;
+            this.textBox1.Text = "Please enter browse for or type full path to file";
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged_1);
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(458, 103);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(213, 20);
+            this.label2.TabIndex = 11;
+            this.label2.Text = "Is this animal in the image?";
+            this.label2.Click += new System.EventHandler(this.label2_Click);
+            // 
+            // textBox2
+            // 
+            this.textBox2.Location = new System.Drawing.Point(478, 200);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(100, 22);
+            this.textBox2.TabIndex = 12;
+            // 
+            // textBox3
+            // 
+            this.textBox3.Location = new System.Drawing.Point(478, 346);
+            this.textBox3.Name = "textBox3";
+            this.textBox3.Size = new System.Drawing.Size(100, 22);
+            this.textBox3.TabIndex = 13;
+            // 
+            // textBox4
+            // 
+            this.textBox4.Location = new System.Drawing.Point(478, 493);
+            this.textBox4.Name = "textBox4";
+            this.textBox4.Size = new System.Drawing.Size(100, 22);
+            this.textBox4.TabIndex = 14;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(484, 534);
+            this.ClientSize = new System.Drawing.Size(711, 584);
+            this.Controls.Add(this.textBox4);
+            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox3);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
@@ -157,7 +211,6 @@
             this.Controls.Add(this.birbButton);
             this.Controls.Add(this.catButton);
             this.Controls.Add(this.dogButton);
-            this.Controls.Add(this.filePath);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -170,8 +223,6 @@
         }
 
         #endregion
-
-        private System.Windows.Forms.TextBox filePath;
         private System.Windows.Forms.CheckBox dogButton;
         private System.Windows.Forms.CheckBox catButton;
         private System.Windows.Forms.CheckBox birbButton;
@@ -180,7 +231,13 @@
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.TextBox textBox4;
     }
 }
 
