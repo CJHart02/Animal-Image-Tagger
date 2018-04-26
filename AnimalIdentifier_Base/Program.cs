@@ -16,8 +16,8 @@ namespace AnimalIdentifier_Base
             Console.Write("Enter the path to an image you wish to analzye: ");
             string imageFilePath = Console.ReadLine();
 
-            ImageTagger animalImageTagger = new ImageTagger();
-            List<Tag> tags = animalImageTagger.GetTagsForImage(imageFilePath);
+            getTags animalImageTagger = new getTags();
+            List<Tag> tags = animalImageTagger.animalTags(imageFilePath);
 
             CallAnimal a = new CallAnimal();
             Cat cat = new Cat();

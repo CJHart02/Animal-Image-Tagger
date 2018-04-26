@@ -51,6 +51,7 @@
     <Compile Include="CallAnimal.cs" />
     <Compile Include="confidenceCheck.cs" />
     <Compile Include="Dog.cs" />
+    <Compile Include="getTags.cs" />
     <Compile Include="ImageTagger.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
