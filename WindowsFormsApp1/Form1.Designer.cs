@@ -91,7 +91,7 @@
             this.Browse.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Browse.Location = new System.Drawing.Point(543, 47);
             this.Browse.Name = "Browse";
-            this.Browse.Size = new System.Drawing.Size(75, 23);
+            this.Browse.Size = new System.Drawing.Size(75, 27);
             this.Browse.TabIndex = 4;
             this.Browse.Text = "Browse";
             this.Browse.UseVisualStyleBackColor = true;
@@ -102,7 +102,7 @@
             this.Search.Font = new System.Drawing.Font("Comic Sans MS", 7.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.Search.Location = new System.Drawing.Point(624, 48);
             this.Search.Name = "Search";
-            this.Search.Size = new System.Drawing.Size(75, 23);
+            this.Search.Size = new System.Drawing.Size(75, 26);
             this.Search.TabIndex = 5;
             this.Search.Text = "Search";
             this.Search.UseVisualStyleBackColor = true;

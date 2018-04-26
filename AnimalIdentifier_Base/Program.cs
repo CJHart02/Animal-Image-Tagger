@@ -16,22 +16,10 @@ namespace AnimalIdentifier_Base
             Console.Write("Enter the path to an image you wish to analzye: ");
             string imageFilePath = Console.ReadLine();
 
-            getTags animalImageTagger = new getTags();
-            List<Tag> tags = animalImageTagger.animalTags(imageFilePath);
+            tagIterator animalTag = new tagIterator();
 
-            CallAnimal a = new CallAnimal();
-            Cat cat = new Cat();
-            Bird bird = new Bird();
-            Dog dog = new Dog();
-
-            foreach (Tag tag in tags)
-            {
-                //Console.WriteLine(tag.confidence);
-                a.callTest(cat, tag.name, tag.confidence);
-                a.callTest(dog, tag.name, tag.confidence);
-                a.callTest(bird, tag.name, tag.confidence);
-            }
-
+            animalTag.TagIterator(imageFilePath);
+           
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();
         }
