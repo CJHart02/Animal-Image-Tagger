@@ -17,9 +17,15 @@ namespace AnimalIdentifier_Base
             string imageFilePath = Console.ReadLine();
 
             tagIterator animalTag = new tagIterator();
+            Cat cat = new Cat();
+            Dog dog = new Dog();
+            Bird bird = new Bird();
 
-            animalTag.TagIterator(imageFilePath);
-           
+
+            animalTag.TagIterator(imageFilePath, cat);
+            animalTag.TagIterator(imageFilePath, dog);
+            animalTag.TagIterator(imageFilePath, bird);
+
             Console.WriteLine("Press Any Key to Continue.");
             Console.ReadLine();
         }

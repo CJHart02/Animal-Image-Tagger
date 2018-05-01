@@ -29,7 +29,6 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
-            this.dogButton = new System.Windows.Forms.CheckBox();
             this.catButton = new System.Windows.Forms.CheckBox();
             this.birbButton = new System.Windows.Forms.CheckBox();
             this.Browse = new System.Windows.Forms.Button();
@@ -45,22 +44,11 @@
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
+            this.dogButton = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             this.SuspendLayout();
-            // 
-            // dogButton
-            // 
-            this.dogButton.AutoSize = true;
-            this.dogButton.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.dogButton.Location = new System.Drawing.Point(18, 200);
-            this.dogButton.Name = "dogButton";
-            this.dogButton.Size = new System.Drawing.Size(82, 28);
-            this.dogButton.TabIndex = 1;
-            this.dogButton.Text = "Doggo";
-            this.dogButton.UseVisualStyleBackColor = true;
-            this.dogButton.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
             // catButton
             // 
@@ -213,11 +201,24 @@
             this.label3.Text = "Please enter full path or browse to image.";
             this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
+            // dogButton
+            // 
+            this.dogButton.AutoSize = true;
+            this.dogButton.Font = new System.Drawing.Font("Comic Sans MS", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dogButton.Location = new System.Drawing.Point(18, 207);
+            this.dogButton.Name = "dogButton";
+            this.dogButton.Size = new System.Drawing.Size(82, 28);
+            this.dogButton.TabIndex = 16;
+            this.dogButton.Text = "Doggo";
+            this.dogButton.UseVisualStyleBackColor = true;
+            this.dogButton.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(711, 584);
+            this.Controls.Add(this.dogButton);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.textBox4);
             this.Controls.Add(this.textBox3);
@@ -232,7 +233,6 @@
             this.Controls.Add(this.Browse);
             this.Controls.Add(this.birbButton);
             this.Controls.Add(this.catButton);
-            this.Controls.Add(this.dogButton);
             this.Name = "Form1";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.Form1_Load);
@@ -245,7 +245,6 @@
         }
 
         #endregion
-        private System.Windows.Forms.CheckBox dogButton;
         private System.Windows.Forms.CheckBox catButton;
         private System.Windows.Forms.CheckBox birbButton;
         private System.Windows.Forms.Button Browse;
@@ -261,6 +260,7 @@
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.CheckBox dogButton;
     }
 }
 

@@ -9,14 +9,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
+
 namespace WindowsFormsApp1
 {
     public partial class Form1 : Form
     {
-        private bool dogChecked;
-        private bool catChecked;
-        private bool birdChecked;
-
         public Form1()
         {
             InitializeComponent();
@@ -38,63 +35,85 @@ namespace WindowsFormsApp1
             Console.WriteLine(result); // <-- For debugging use.
         }
 
-        private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        private void checkBox1_CheckedChanged_1(object sender, EventArgs e)
         {
-             
-            if (dogButton.Checked == true)
-            {
-                dogChecked = true;
-            }
-            if (dogButton.Checked == false)
-            {
-                dogChecked = false;
-            }
+
         }
 
         private void checkBox2_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (catButton.Checked == true)
-            {
-                catChecked = true;
-            }
-            if (dogButton.Checked == false)
-            {
-                catChecked = false;
-            }
+            
         }
 
         private void checkBox3_CheckedChanged(object sender, EventArgs e)
         {
-
-            if (birbButton.Checked == true)
-            {
-                birdChecked = true;
-            }
-            if (dogButton.Checked == false)
-            {
-                birdChecked = false;
-            }
+            
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
             
-
-            if (dogChecked == true)
+            if (dogButton.Checked == true)
             {
-
+                AnimalIdentifier_Base.tagIterator animalTag = new AnimalIdentifier_Base.tagIterator();
+                AnimalIdentifier_Base.Dog dog = new AnimalIdentifier_Base.Dog();
+                animalTag.TagIterator(textBox1.Text, dog);
+                if (dog.returnBool() == true)
+                {
+                    textBox2.Text = "Yes";
+                }
+                else
+                {
+                    textBox2.Text = "No.";
+                }
             }
-
-            if (catChecked == true)
+            /*
+            else
             {
-
+                textBox2.Text = " ";
             }
-
-            if (birdChecked == true)
+            */
+            if (catButton.Checked == true)
             {
-
+                AnimalIdentifier_Base.tagIterator animalTag = new AnimalIdentifier_Base.tagIterator();
+                AnimalIdentifier_Base.Cat cat = new AnimalIdentifier_Base.Cat();
+                animalTag.TagIterator(textBox1.Text, cat);
+                if (cat.returnBool() == true)
+                {
+                    textBox3.Text = "Yes";
+                }
+                else
+                {
+                    textBox3.Text = "No.";
+                }
             }
+            /*
+            else
+            {
+                textBox3.Text = " ";
+            }
+            */
+
+            if (birbButton.Checked == true)
+            {
+                AnimalIdentifier_Base.tagIterator animalTag = new AnimalIdentifier_Base.tagIterator();
+                AnimalIdentifier_Base.Bird bird = new AnimalIdentifier_Base.Bird();
+                animalTag.TagIterator(textBox1.Text, bird);
+                if (bird.returnBool() == true)
+                {
+                    textBox4.Text = "Yes";
+                }
+                else
+                {
+                    textBox4.Text = "No.";
+                }
+            }
+            /*
+            else
+            {
+                textBox4.Text = " ";
+            }
+            */
 
         }
 
@@ -137,5 +156,7 @@ namespace WindowsFormsApp1
         {
 
         }
+
+        
     }
 }

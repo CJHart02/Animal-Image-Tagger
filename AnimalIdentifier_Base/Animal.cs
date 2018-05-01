@@ -6,18 +6,21 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    abstract class Animal
+    public abstract class Animal
     {
         protected bool isAnimal;
 
         public virtual void imageTest(string name, double conf)
         {
-
+            
         }
+
 
         protected virtual void output()
         {
 
         }
+
+
     }
 }

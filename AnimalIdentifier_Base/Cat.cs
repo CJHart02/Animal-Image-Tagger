@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AnimalIdentifier_Base
 {
-    class Cat : Animal
+    public class Cat : Animal
     {
         public override void imageTest(string name, double conf)
         {
@@ -24,6 +24,11 @@ namespace AnimalIdentifier_Base
             {
                 Console.WriteLine("This image contains a cat.");
             }
+        }
+
+        public bool returnBool()
+        {
+            return isAnimal;
         }
     }
 }
